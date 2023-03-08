@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(218, 23%, 16%);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 375px;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 1.5rem;
+  padding: 0 3em;
+  position: relative;
+}
+.card__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgb(82, 255, 168);
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-top: 3rem;
+}
+.card__advice {
+  color: #cee3e9;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.card__divider {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.card__divider-img {
+  width: 100%;
+  height: 100%;
+}
+.card__show-quote {
+  position: absolute;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  bottom: -3.6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgb(82, 255, 168);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.card__show-quote:focus, .card__show-quote:hover {
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(82, 225, 168, 0.583);
+          box-shadow: 0px 0px 5px 5px rgba(82, 225, 168, 0.583);
+  outline: none;
+}
+.card__two {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: 500px;
+  }
+  .card__one {
+    display: none;
+  }
+  .card__two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */

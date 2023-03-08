@@ -1,0 +1,96 @@
+@use "./variables" as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+body {
+	height: 100vh;
+	font-family: "Manrope", sans-serif;
+	background-color: $dark-blue;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 375px;
+	background-color: $dark-grayish-blue;
+	border-radius: 1.5rem;
+	padding: 0 3em;
+	position: relative;
+
+	&__title {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		color: $neon-green;
+		letter-spacing: 1px;
+		font-weight: 300;
+		margin-top: 3rem;
+	}
+	&__advice {
+		color: $light-cyan;
+		font-size: 2.8rem;
+		font-weight: 700;
+		margin-top: 1rem;
+	}
+	&__divider {
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+		&-img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__show-quote {
+		position: absolute;
+		margin-bottom: 1rem;
+		cursor: pointer;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		border: none;
+		bottom: -3.6rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $neon-green;
+		transition: box-shadow 0.3s;
+	}
+	&__show-quote:focus,
+	&__show-quote:hover {
+		box-shadow: 0px 0px 5px 5px rgba(82, 225, 168, 0.583);
+		outline: none;
+	}
+	&__two {
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	.card {
+		width: 500px;
+		&__one {
+			display: none;
+		}
+		&__two {
+			display: flex;
+		}
+	}
+}
